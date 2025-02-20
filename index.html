@@ -7,12 +7,24 @@
     <script src="https://kit.fontawesome.com/072cf4aaf6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/svg.css">
     <title>Gala of the year</title>
 </head>
 <body>
     <!--<a href="pages/svg.html"><button>Next page</button></a>-->
     <nav class="nav_bar">
         <img class="img-header" src="images/terrawall.avif" alt="plants growing next to a wall" height: 1000px; width: 1260px;>
+        <div class="logo">
+            <svg height="70" width="70" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="pattern" x="0" y="0" width="20" height="20"
+                    patternUnits="userSpaceOnUse">
+                    <circle cx="10" cy="10" r="10" fill="#000"/>
+                    </pattern>
+                </defs>
+                <rect width="2000" height="130" x="0" y="0" stroke="none" fill="url(#pattern)"/>
+            </svg>
+        </div>
         <ul class="nav_list">
             <li class="nav_li"><a class="nav_link" href="#">Save the date</a><p class="nav_text">June 5th, 2027</p></li>
             <li class="nav_li"><a class="nav_link" href="#">Check-in starts</a><p class="nav_text">5:30 PM</p></li>
@@ -84,7 +96,11 @@
 
         <section class="FAQ">
             <div class="container_FAQ1">
-                <h2 class="faq-title">FAQs</h2>
+                <img class="FAQ-title" src="images/FAQ.svg" alt="title FAQ">
+                <!--
+                <svg class="FAQ-img-title">
+                    <use href="images/FAQ.svg"></use>
+                </svg>-->
                 <h5>What is the purpose of this fundraiser?</h5>
                 <p class="FAQ-text">Our event aims to raise funds to support our ongoing programs and initiatives.</p>
                 
