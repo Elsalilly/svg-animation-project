@@ -1,0 +1,20 @@
+
+        <svg width="200" height="200" viewbox="0 0 250 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="pattern" x="0" y="0" width="20" height="20"
+                    patternUnits="userSpaceOnUse">
+                    <circle cx="10" cy="10" r="10" fill="#000"/>
+                    </pattern>
+                </defs>
+                <rect width="170" height="130" x="0" y="0" stroke="red" fill="url(#pattern)"/>
+        </svg>
+
+        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                <defs> 
+                    <radialGradient id="gradi" cx="50%" cy="50%" r="50%" fx"50%" fy="50%">
+                        <stop offset="0%" stop-color="red" />
+                        <stop offset="100%" stop-color="blue" />
+                    </radialGradient>
+                </defs>
+                <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#gradi)"/>
+        </svg>

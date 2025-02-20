@@ -5,6 +5,7 @@ body {
     margin: auto;
 }
 
+/* NAV section */
  .nav_bar {
     width: 1260px;
     height: 1000px;
@@ -76,12 +77,16 @@ a {
     color: #f4efe5;
 }
 
+/* Header section */
+
 .container_header {
-    width: 1260;
-    max-height: 200px;
+    max-width: 1000;
+    max-height: 650px;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 150px;
-    left: 80px;
+    left: 20px;
 }
 
 h3 {
@@ -91,6 +96,8 @@ h3 {
     font-size: 18px;
     color: #f4efe5;
     margin-top: 70px;
+    width: 600px;
+    height: 100px;
 }
 
 h1 {
@@ -99,6 +106,8 @@ h1 {
     font-style: normal;
     font-size: 90px;
     color: #f4efe5;
+    width: 1200px;
+    display: flex;
 }
 
 .header-text {
@@ -111,7 +120,7 @@ h1 {
 
 .register-h {
     width: 200px;
-    height: 60px;
+    height: 100px;
     font-family: "Libre Baskerville", serif;
     font-weight: 400;
     font-style: normal;
@@ -126,10 +135,13 @@ h1 {
 }
 
 .register-h:hover {
-    color:#cf9a9a;
+    color: #f4efe5;
     font-weight: 700;
-    font-size: larger;
+    transform: scale(1.1);
+    box-shadow: #f4efe5 0px 0px 2px inset, rgba(207, 154, 154) 10px -10px 0px -3px, rgb(207, 154, 154) 10px -10px;
 }
+
+/* Event section */
 
 .event_details {
     max-width: 1260px;
@@ -189,6 +201,8 @@ h1 {
     font-size: 18px;
     color: #000; 
 }
+
+/* Program section */
 
 .program {
     max-width: 1260px;
@@ -278,6 +292,8 @@ h1 {
     color: #f4efe5;
 }
 
+/* FAQ section */
+
 .FAQ {
     max-width: 1260px;
     max-height: 600px;
@@ -334,6 +350,8 @@ h5, .FAQ-text {
     background-color: rgba(56, 110, 66, 0.2);
     transition: all 0.5s;
 }
+
+/* Donate section */
 
 .donate {
     width: 1260px;
@@ -441,6 +459,8 @@ output, .money-sign {
     animation: tension 5s infinite;
     font-size: 25px;
 }
+
+/* Spread the word section */
 
 .outreach {
     width: 1260px;
@@ -557,6 +577,8 @@ output, .money-sign {
 .img-media:hover, .img-flyer:hover {
     transform: scale(1.5) translateY(-40px);
   }
+
+/* Contact us section */
 
 .contact-us {
     width: 1260px;
