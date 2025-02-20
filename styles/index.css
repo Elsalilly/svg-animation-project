@@ -13,11 +13,6 @@ body {
     align-items: baseline;
     justify-content: space-around;
     position: relative;
-    /*
-    background-image: url(../images/tulips.avif);
-    background-repeat: no-repeat;
-    background-size: 1260px 1000px;
-    */
 }
 
 .img-header {
@@ -48,6 +43,19 @@ a {
     flex-direction: row;
     justify-content: space-evenly;
     position: absolute;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: 4;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 0.5;}
+    100% {opacity: 0.1;}
+}
+
+.nav_li:hover {
+    transform: scale(1.2)
 }
 
 .nav_text {
@@ -101,8 +109,16 @@ h1 {
     color: #f4efe5; 
     background-color: transparent;
     border-radius: 10px;
-    border: solid 5px #f4efe5;
+    border: solid 3px #f4efe5;
     margin-top: 10px;
+    animation-delay: 1s;
+    animation-duration: 10s;
+}
+
+.register-h:hover {
+    color:#cf9a9a;
+    font-weight: 700;
+    font-size: larger;
 }
 
 .event_details {
@@ -153,7 +169,7 @@ h1 {
     font-weight: 400;
     font-style: normal;
     font-size: 40px;
-    color: #000; 
+    color: #000;
 }
 
 .event-small-title {
@@ -179,6 +195,7 @@ h1 {
     min-width: 1260px;
     max-height: 700px;
     opacity: 0.75;
+    z-index: -1;
 }
 
 .program-flow {
@@ -201,8 +218,14 @@ h1 {
     color: #f4efe5; 
     background-color: transparent;
     border-radius: 10px;
-    border: solid 5px #f4efe5;
+    border: solid 3px #f4efe5;
     margin-top: 10px;
+}
+
+.register-p:hover {
+    color:#cf9a9a;
+    font-weight: 700;
+    font-size: 20px
 }
 
 .program-list {
@@ -217,7 +240,12 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-evenly;
     position: absolute;
-    right: 100px;
+    right: 20px;
+}
+
+.program-list:hover {
+    background-color: rgb(0, 0, 0, 0.3);
+    transition: all 0.7s;
 }
 
 .list-1 {
@@ -242,7 +270,7 @@ h1 {
     max-width: 1260px;
     max-height: 600px;
     display: flex;
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-evenly;
 }
@@ -274,14 +302,29 @@ h5 {
 }
 
 .container_FAQ1 {
-    width: 500px;
-    height: 800px;
+    max-width: 500px;
+    max-height: 600px;
+}
+
+h5, .FAQ-text {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.container_FAQ1:hover {
+    background-color: rgba(56, 110, 66, 0.2);
+    transition: all 0.5s;
 }
 
 .container_FAQ2 {
-    width: 500px;
-    height: 800px;
+    max-width: 500px;
+    max-height: 600px;
     margin-left: 50px;
+}
+
+.container_FAQ2:hover {
+    background-color: rgba(56, 110, 66, 0.2);
+    transition: all 0.5s;
 }
 
 .donate {
@@ -328,6 +371,15 @@ h5 {
     color: #000;
 }
 
+output, .money-sign {
+
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: #000;
+}
+
 .donate-text2 {
     font-family: "Libre Baskerville", serif;
     font-weight: 400;
@@ -339,19 +391,19 @@ h5 {
 }
 
 .slider {
-    width: 500px;
+    width: 400px;
     -webkit-appearance: none;
     appearance: none;
     background-color: #ffffff;
-    color: #c72828;
     border-radius: 5px;
 }
 
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
     background-color: #cf9a9a;
 }
 
@@ -367,6 +419,19 @@ h5 {
     font-size: 20px;
     background-color: #cf9a9a;
     border: none;
+    animation-name: tension;
+    animation-delay: 1s;
+}
+
+@keyframes tension {
+   0% {transform: scale(1);}
+   50% {transform: scale(1.2);}
+   100% {transform: scale(1);}
+}
+
+.donate-btn:hover {
+    animation: tension 5s infinite;
+    font-size: 25px;
 }
 
 .outreach {
@@ -417,6 +482,9 @@ h5 {
 .card {
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .outreach-btn {
@@ -432,8 +500,32 @@ h5 {
     border: solid 3px #f4efe5;
     margin-top: 10px;
     align-self: center;
-
+    position: relative;
 }
+
+.outreach-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50px;
+    background-color: #cf9a9a;
+    z-index: -1;
+    transition: transform 0.3s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.outreach-btn:hover::before {
+    transform: scaleX(1);
+}
+
+.outreach-btn {
+    z-index: 1;
+}
+
 
 .img-flyer {
     width: 175px;
@@ -442,17 +534,25 @@ h5 {
 
 .img-media {
     width: 175px;
-    height: 250px;  
+    height: 250px;
 }
 
 .img-poster {
     width: 250px;
-    height: 175px;  
+    height: 175px; 
 }
+
+.img-poster:hover {
+  transform: scale(1.5) translateY(-30px);
+}
+
+.img-media:hover, .img-flyer:hover {
+    transform: scale(1.5) translateY(-40px);
+  }
 
 .contact-us {
     width: 1260px;
-    height: 650px;
+    height: 700px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -460,7 +560,7 @@ h5 {
 
 .img-contact {
     width: 1260px;
-    height: 650px;
+    height: 700px;
     opacity: 0.75;
     position: absolute;
     z-index: -1;
@@ -497,14 +597,57 @@ h5 {
 }
 
 .contact-socials {
-    width: 500px;
+    width: 700px;
     height: 200px;
     margin-left: 50px;
+}
+
+.icons {
+    width: 300px;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.circle-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    position: relative;
+}
+
+.circle-icon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50px;
+    background-color: #cf9a9a;
+    z-index: -1;
+    transition: transform 0.2s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: top;
+
+}
+
+.circle-icon:hover::before {
+    transform: scaleX(1);
+}
+
+.circle-icon {
+    z-index: 1;
+    color:#f4efe5;
 }
 
 .fa-brands {
  color:#f4efe5;
  font-size: 30px;
- width: 55px;
  margin-top: 10px;
 }

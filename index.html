@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Gelasio:wght@400..700&family=Libre+Baskerville:wght@400;700&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/072cf4aaf6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="styles/index.css">
-    <title>Website</title>
+    <title>Gala of the year</title>
 </head>
 <body>
     <!--<a href="pages/svg.html"><button>Next page</button></a>-->
@@ -24,7 +25,7 @@
                 <h3>LGBTQIA+ Community Archive x Melkweg presents</h3>
                 <h1>Gala of lived embodiment in AMS</h1>
                 <p class="header-text">A night of inspiration, connection, and a chance to make a real impact</p>
-                <button class="register-h">Register to Attend</button>
+                <button class="register-h animate__fadeIn">Register to Attend</button>
             </div>
         </header>
     </nav>
@@ -56,27 +57,27 @@
             </div>
             <ul class="program-list">
                 <div class="list-2">
-                    <p class="program-time">6:00 PM</p> 
-                    <p class="program-time">7:00 PM</p>
-                    <p class="program-time">7:15 PM</p>
-                    <p class="program-time">8:00 PM</p>
-                    <p class="program-time">8:15 PM</p>
-                    <p class="program-time">8:45 PM</p>
-                    <p class="program-time">9:15 PM</p>
-                    <p class="program-time">9:30 PM</p>
-                    <p class="program-time">10:00 PM</p>
+                    <p>6:00 PM</p> 
+                    <p>7:00 PM</p>
+                    <p>7:15 PM</p>
+                    <p>8:00 PM</p>
+                    <p>8:15 PM</p>
+                    <p>8:45 PM</p>
+                    <p>9:15 PM</p>
+                    <p>9:30 PM</p>
+                    <p>10:00 PM</p>
                 </div>
 
                 <div class="list-1">
-                <p>Cocktail hour</p>
-                <p>Welcome remarks</p>
-                <p>Dinner service</p>
-                <p>Keynote speaker</p>
-                <p>Live auction</p>
-                <p>Entertainment segment</p>
-                <p>Closing remarks</p>
-                <p>Networking and silent auction</p>
-                <p>Conclusion</p>
+                    <p>Cocktail hour</p>
+                    <p>Welcome remarks</p>
+                    <p>Dinner service</p>
+                    <p>Keynote speaker</p>
+                    <p>Live auction</p>
+                    <p>Entertainment segment</p>
+                    <p>Closing remarks</p>
+                    <p>Networking and silent auction</p>
+                    <p>Conclusion</p>
                 </div>
             </ul>
         </section>
@@ -94,7 +95,7 @@
                 <h5>Is the event accessible to people with disabilities?</h5>
                 <p class="FAQ-text">Yes! Entrances and restrooms are wheelchair-accessible. Contact us in advance so we can make the necessary arrangements to support you.</p>
 
-                <h5>What happens if the event is rescheduled or canceled?</h5>
+                <h5 class="FAQhover">What happens if the event is rescheduled or canceled?</h5>
                 <p class="FAQ-text">We will be sharing updates on our social media channels for updates on any changes or cancellations.</p>
 
                 <h5>How can I volunteer for the event?</h5>
@@ -106,10 +107,11 @@
             <div class="box-donate">
                 <h2 class="donate-title">Donate here</h2>
                 <div class="container_donate">
-                    <p class="donate-text">LGBTQIA Community Archive</p>
+                    <p class="donate-text">LGBTQIA+ Community Archive</p>
                     <p class="donate-text">€789 raised <span class="donate-text2"> of €250 000 goal</span></p>
                     <div class="slider-range">
-                        <input type="range" name="slider" min="1" max="250000" value="47000" class="slider" id="myRange">
+                        <input type="range" name="slider" min="1" max="10000" value="0" class="slider" id="myRange" oninput="this.nextElementSibling.value = this.value">
+                        <output>0</output><span class="money-sign">€</span>
                     </div>
                 </div>
                 <button class="donate-btn">Donate</button>
@@ -158,10 +160,12 @@
         </div>
         <div class="contact-socials">
             <p class="contact-text1">Social</p>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <ul class="icons">
+                <li class="circle-icon"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li class="circle-icon"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li class="circle-icon"><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li class="circle-icon"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            </ul>
         </div>
     </footer>
 
